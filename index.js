@@ -11,7 +11,6 @@ botaoAdicionar.addEventListener("click", function(evento) {
         return; //qdo a função encontra o return, é interrompida.
     }
 
-
     const itemDaLista = document.createElement("li"); //criamos o elemento li, que representa um item da lista. com o .createElement, ele é anexado ao DOM, mas ainda não é visível na página.
     const containerItemDaLista = document.createElement("div");
     containerItemDaLista.classList.add("lista-item-container"); //atribuindo uma classe aos elementos criados, para facilitar a estilização e organização.
@@ -21,13 +20,26 @@ botaoAdicionar.addEventListener("click", function(evento) {
     inputCheckbox.id = "checkbox-" + contador++; //criando um id único para cada checkbox, usando o contador para garantir que cada um tenha um identificador distinto.
 
     const nomeItem = document.createElement("p");
-    nomeItem.innerText = inputItem.value; //o valor do campo de input é atribuído ao texto do elemento p
+    nomeItem.innerText = inputItem.value; //o valor do campo de input é atribuído ao texto do elemento pconstruindo arvore genealogica mas ao contrario, do menor para o pai, que é o itemlista
 
-    //construindo arvore genealogica mas ao contrario, do menor para o pai, que é o itemlista
+inputCheckbox.addEventListener("click", function() {
+        if (inputCheckbox.checked) { 
+            nomeItem.style.textDecoration = "line-through";
+        } else {
+            nomeItem.style.textDecoration = "none";
+            }
+    })
+
     containerItemDaLista.appendChild(inputCheckbox); // elemento fikho é adicionado ao elemento pai, no caso, o checkbox é adicionado ao container
     containerItemDaLista.appendChild(nomeItem); //o nome do item é adicionado ao container
 
     itemDaLista.appendChild(containerItemDaLista); //o container, que agora contém o checkbox e o nome do item, é adicionado ao elemento li, que representa o item da lista.
     listaDeCompras.appendChild(itemDaLista); //o item da lista é adicionado à lista de compras, tornando-o visível na página.
 
-}); 
+
+    const diaDaSemana = new Date().toLocaleDateString("pt-BR", { weekday: "long" }); //obtendo o dia da semana atual em português do Brasil, o tolocaldatestring permite a formatação da data
+    const data = new Date().toLocaleDateString("pt-BR");
+
+    const dataCompleta = `${diaDaSemana} (${data})`;
+    console.log(dataCompleta);
+});
