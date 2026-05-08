@@ -34,12 +34,20 @@ inputCheckbox.addEventListener("click", function() {
     containerItemDaLista.appendChild(nomeItem); //o nome do item é adicionado ao container
 
     itemDaLista.appendChild(containerItemDaLista); //o container, que agora contém o checkbox e o nome do item, é adicionado ao elemento li, que representa o item da lista.
+
+   const diaDaSemana = new Date().toLocaleDateString("pt-BR", { weekday: "long" }); //obtendo o dia da semana atual em português do Brasil, o tolocaldatestring permite a formatação da data
+    const data = new Date().toLocaleDateString("pt-BR");
+    const hora = new Date().toLocaleTimeString("pt-BR", {
+        hour: "numeric",
+        minute: "numeric",
+    });
+    const dataCompleta = `${diaDaSemana} (${data}) às ${hora}`; //criando uma string formatada que combina o dia da semana, a data e a hora em um formato legível.
+
+    const itemData = document.createElement("p"); 
+    //criamos um elemento pois só é possivel criar um appendchild com elementos
+    itemData.innerText = dataCompleta;
+    itemData.classList.add("texto-data"); //atribuindo o estilo
+    itemDaLista.appendChild(itemData); //o elemento que contém a data completa é adicionado ao item da lista, permitindo que a informação de quando o item foi adicionado seja exibida junto com o nome do item.
     listaDeCompras.appendChild(itemDaLista); //o item da lista é adicionado à lista de compras, tornando-o visível na página.
 
-
-    const diaDaSemana = new Date().toLocaleDateString("pt-BR", { weekday: "long" }); //obtendo o dia da semana atual em português do Brasil, o tolocaldatestring permite a formatação da data
-    const data = new Date().toLocaleDateString("pt-BR");
-
-    const dataCompleta = `${diaDaSemana} (${data})`;
-    console.log(dataCompleta);
 });
