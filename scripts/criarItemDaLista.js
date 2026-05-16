@@ -1,7 +1,8 @@
 const inputItem  = document.getElementById("input-item"); //se colocassemos.value, imprimiria o valor do campo de inputItem, que no caso está vazio.
+let contador = 0; //variável para contar o número de itens adicionados à lista. let é uma variavel que pode ser alterada, diferente de const
 
-export function criarItemDaLista(){
-    evento.preventDefault(); //previne o comportamento padrão do botão, que é recarregar a página. Já o addeventlistener informa o valor do input no momento do clique. O export permite que a função seja usada em outros arquivos, assemelha com DOM
+
+export function criarItemDaLista() { // O export permite que a função seja usada em outros arquivos, assemelha com DOM
     if (inputItem.value === "") {
         alert("Insira um item!"); //impede adicionar item vazio
         return; //qdo a função encontra o return, é interrompida.
@@ -44,7 +45,6 @@ inputCheckbox.addEventListener("click", function() {
     itemData.innerText = dataCompleta;
     itemData.classList.add("texto-data"); //atribuindo o estilo
     itemDaLista.appendChild(itemData); //o elemento que contém a data completa é adicionado ao item da lista, permitindo que a informação de quando o item foi adicionado seja exibida junto com o nome do item.
-    listaDeCompras.appendChild(itemDaLista); //o item da lista é adicionado à lista de compras, tornando-o visível na página.
 
     return itemDaLista;
 }
