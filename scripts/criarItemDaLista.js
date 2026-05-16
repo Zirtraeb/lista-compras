@@ -1,3 +1,4 @@
+import gerarDiaDaSemana from "./gerarDiaDaSemana.js";
 const inputItem  = document.getElementById("input-item"); //se colocassemos.value, imprimiria o valor do campo de inputItem, que no caso está vazio.
 let contador = 0; //variável para contar o número de itens adicionados à lista. let é uma variavel que pode ser alterada, diferente de const
 
@@ -32,13 +33,7 @@ inputCheckbox.addEventListener("click", function() {
 
     itemDaLista.appendChild(containerItemDaLista); //o container, que agora contém o checkbox e o nome do item, é adicionado ao elemento li, que representa o item da lista.
 
-   const diaDaSemana = new Date().toLocaleDateString("pt-BR", { weekday: "long" }); //obtendo o dia da semana atual em português do Brasil, o tolocaldatestring permite a formatação da data
-    const data = new Date().toLocaleDateString("pt-BR");
-    const hora = new Date().toLocaleTimeString("pt-BR", {
-        hour: "numeric",
-        minute: "numeric",
-    });
-    const dataCompleta = `${diaDaSemana} (${data}) às ${hora}`; //criando uma string formatada que combina o dia da semana, a data e a hora em um formato legível.
+    const dataCompleta = gerarDiaDaSemana(); //chamando a função gerarDiaDaSemana para obter a data completa para usá-la ali embaixo
 
     const itemData = document.createElement("p"); 
     //criamos um elemento pois só é possivel criar um appendchild com elementos
