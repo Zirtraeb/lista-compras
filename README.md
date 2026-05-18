@@ -1,36 +1,28 @@
+<p align="center">
+    <img src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green?style=for-the-badge&logoSize=auto" />
+</p>
 
-![Descricao da sua imagem](https://imgur.com/C8TfWXc.png)
+    
+# Sistema Madeireira
+Aplicação web de lista de compras
+# ⚒️Funcionalidades⚒️
+- `Funcionalidade 1:` Inserção de itens em uma lista dinâmica;
+  - Itens podem ser editados ou excluídos
+- `Funcionalidade 2:`Itens possuem data e horário de criação;
+- `Funcionalidade 3:` Checkbox para informar que item foi comprado;
+  - `0-99 unidades`: Não há desconto;
+  - `100-499:` 4% de desconto;
+  - `500-999: `9% de desconto;
+  - `1000-2000:` 16% de desconto;
+- `Funcionalidade 4:` Menu apresenta diferentes opções de transporte através da função `frete()`, retornando o valor do frete escolhido;
+  - `1-Rodoviário:` R$1000;
+  - `2-Ferroviário:` R$2000;
+  - `3-Hidroviário:` R$2500;
+- `Funcionalidade 5:` Apresenta o valor das toras sem o desconto, o valor do frete e por fim, valor total a ser pago.
 
-# Titulo do projeto
 
-Aplicação web de lista de compras para o curso de construção de páginas dinâmicas com JavaScript.
 
-## 🔨 Funcionalidades do projeto
-
-A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo a exclusão e edição dos mesmos. Os itens terão o nome e também a data e horário que foram criados. Também é possível selecionar um checkbox para informar que o item foi comprado.
-
-![Inserção no campo de digitação do valor ração de gato, após, é clicado no botão de edição, onde é aberto um popup para digitar o novo do nome item, que foi digitado ração de cachorro. Em seguida, é clicado no botão de exclusão, e o item é excluído.](https://imgur.com/isPj7Xf.gif)
-
-## ✔️ Técnicas e tecnologias utilizadas
-
-As técnicas e tecnologias utilizadas pra isso são:
-
-- `HTML`: criação dos elementos da tela;
-- `CSS`: estilização da aplicação;
-- `JavaScript`: construção de elementos dinâmicos através da manipulação do DOM.
-
-## 📁 Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto inicial](https://github.com/alura-cursos/3801-javascript-para-web/tree/projeto-base) ou [baixá-lo](https://github.com/alura-cursos/3801-javascript-para-web/archive/refs/heads/projeto-base.zip).
-
-## 🛠️ Abrir e rodar o projeto
-
-Após baixar o projeto, você pode abrir com o Visual Studio Code. Para isso, no menu superior, clique em:
-
-- **File** > **Open Folder** (ou alguma opção similar)
-- Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo)
-- Por fim clique em OK
-
-Ao finalizar esses passos, você pode executar a aplicação com a extensão Live Server 🏆 
+# 🖥️Tecnologias usadas🖥️
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,vscode)](https://skillicons.dev)
 
 
