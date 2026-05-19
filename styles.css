@@ -5,17 +5,17 @@
 }
 
 :root {
-    --cor-primaria: #F55B64;
+    --cor-primaria: #6310e0;
     --cor-secundaria: #C2373F;
     --neutro: #F9F9F9;
     --preto: #131730;
-    --fonte-titulo: "Krona One", sans-serif;
-    --fonte-texto: 'Numans', sans-serif;
-    --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
+    --fonte-titulo: "Plus Jakarta Sans", sans-serif;
+    --fonte-texto:  "Plus Jakarta Sans", sans-serif;
+    --degrade-verde: linear-gradient(180deg, #000000 0%, rgb(124, 104, 13) 100%);
 }
 
 body {
-    background: var(--degrade-azul);
+    background: var(--degrade-verde);
     background-repeat: no-repeat;
     height: 100vh;
 
@@ -42,14 +42,14 @@ main {
 h2 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 700;
     line-height: 32px;
 }
 
 hr {
     border: none;
-    border-bottom: 3px dotted var(--cor-primaria);
+    border-bottom: 4px dotted var(--cor-primaria);
     margin-bottom: 24px;
 }
 
@@ -72,7 +72,7 @@ p {
 }
 
 .input-item::placeholder {
-    font-family: "Montserrat", sans-serif;
+    font-family:  "Plus Jakarta Sans", sans-serif;
     font-size: 16px;
     line-height: 19px;
 }
