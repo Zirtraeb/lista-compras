@@ -3,7 +3,7 @@
 </p>
 
     
-# Sistema Madeireira
+# Lista de Compras
 Aplicação web de lista de compras
 # ⚒️Funcionalidades⚒️
 - `Funcionalidade 1:` Inserção de itens em uma lista dinâmica;
